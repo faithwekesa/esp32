@@ -9,7 +9,6 @@ export default function Page() {
   return (
     <div className="flex bg-[#f8fafc] min-h-screen text-slate-600">
       
-      {/* Sidebar Navigation */}
       <aside className="w-72 bg-[#0d1625] text-slate-300 flex flex-col justify-between h-screen p-6 border-r border-slate-800 shrink-0">
         <div>
           <div className="flex items-center gap-3 px-2 py-5 mb-8 border-b border-slate-800">
@@ -19,19 +18,19 @@ export default function Page() {
 
           <nav className="space-y-2">
             <button className="w-full flex items-center gap-4 px-4 py-3 bg-blue-600 text-white rounded-xl font-semibold text-sm shadow-md transition">
-              <span className="text-lg">📊</span> Dashboard
+              <span className="text-lg"></span> Dashboard
             </button>
             <button className="w-full flex items-center gap-4 px-4 py-3 hover:bg-slate-800 text-slate-400 hover:text-white rounded-xl font-semibold text-sm transition">
-              <span className="text-lg">🔌</span> Relays
+              <span className="text-lg"></span> Relays
             </button>
             <button className="w-full flex items-center gap-4 px-4 py-3 hover:bg-slate-800 text-slate-400 hover:text-white rounded-xl font-semibold text-sm transition">
-              <span className="text-lg">⚙️</span> Settings
+              <span className="text-lg"></span> Settings
             </button>
             <button className="w-full flex items-center gap-4 px-4 py-3 hover:bg-slate-800 text-slate-400 hover:text-white rounded-xl font-semibold text-sm transition">
-              <span className="text-lg">📋</span> Logs
+              <span className="text-lg"></span> Logs
             </button>
             <button className="w-full flex items-center gap-4 px-4 py-3 hover:bg-slate-800 text-slate-400 hover:text-white rounded-xl font-semibold text-sm transition">
-              <span className="text-lg">ℹ️</span> About
+              <span className="text-lg"></span> About
             </button>
           </nav>
         </div>
@@ -45,14 +44,11 @@ export default function Page() {
         </div>
       </aside>
 
-      {/* Main Framework Viewspace */}
-      <main className="flex-1 flex flex-col min-h-screen p-10 max-w-7xl mx-auto space-y-8">
+      <main className="flex-1 flex flex-col justify-center min-h-screen p-10 max-w-7xl mx-auto space-y-8">
         
-        {/* Upper Segment Title Banner */}
-        <div className="flex items-start justify-between border-b border-slate-200 pb-6">
-          <div className="space-y-1">
+        <div className="flex items-center justify-between border-b border-slate-200 pb-6">
+          <div>
             <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Dashboard</h1>
-            <p className="text-sm font-medium text-slate-500">Monitor and manage your hardware telemetry</p>
           </div>
           <div className="text-right space-y-1.5">
             <div className="flex items-center gap-2 justify-end">
@@ -63,10 +59,8 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Dashboard Grid Content */}
-        <div className="space-y-8 flex-1">
+        <div className="space-y-8">
           
-          {/* Temperature Telemetry Layout */}
           <div className="w-full bg-white rounded-2xl border border-slate-100 shadow-sm p-8 flex flex-col gap-3">
             <span className="text-xs font-bold text-slate-400 tracking-widest uppercase">Temperature Metrics</span>
             <div className="flex items-center gap-6 mt-1">
@@ -78,12 +72,10 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Expanded Hardware Relay Toggles */}
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Relay Controls</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               
-              {/* Relay Module 1 */}
               <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 flex items-center justify-between transition-all duration-300">
                 <div className="space-y-3">
                   <div>
@@ -98,7 +90,6 @@ export default function Page() {
                 <span className={`text-5xl transition-all duration-300 transform select-none ${relay1 ? 'text-amber-400 drop-shadow-[0_4px_12px_rgba(251,191,36,0.5)] scale-110 opacity-100' : 'text-slate-300 opacity-40 scale-100'}`}>💡</span>
               </div>
 
-              {/* Relay Module 2 */}
               <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 flex items-center justify-between transition-all duration-300">
                 <div className="space-y-3">
                   <div>
@@ -116,23 +107,22 @@ export default function Page() {
             </div>
           </div>
 
-          {/* System Device Infrastructure Info Footprint */}
           <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 flex flex-col gap-5">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Device Information</h3>
             <div className="grid grid-cols-3 gap-6 divide-x divide-slate-100 text-center">
               <div className="flex flex-col items-center justify-center p-3">
-                <span className="text-slate-400 mb-2 text-2xl">📶</span>
+                <img src="/wificonnection.png" alt="Wi-Fi" className="w-14 h-14 mb-2 object-contain" />
                 <span className="text-xs text-slate-400 font-bold tracking-wide uppercase">Connection</span>
                 <span className="text-base font-extrabold text-slate-800 mt-1">Wi-Fi Network</span>
                 <span className="text-xs font-black text-emerald-500 mt-0.5 tracking-wider">STRONG SIGNAL</span>
               </div>
               <div className="flex flex-col items-center justify-center p-3">
-                <span className="text-slate-400 mb-2 text-2xl">⏱️</span>
+                <img src="/clockicon.png" alt="Uptime" className="w-14 h-14 mb-2 object-contain" />
                 <span className="text-xs text-slate-400 font-bold tracking-wide uppercase">System Uptime</span>
                 <span className="text-base font-extrabold text-slate-800 mt-2 tracking-tight">2h 15m 30s</span>
               </div>
               <div className="flex flex-col items-center justify-center p-3">
-                <span className="text-slate-400 mb-2 text-2xl">🎛️</span>
+                <img src="/esp32icon.png" alt="Hardware Core" className="w-14 h-14 mb-2 object-contain" />
                 <span className="text-xs text-slate-400 font-bold tracking-wide uppercase">Hardware Core</span>
                 <span className="text-base font-extrabold text-slate-800 mt-1">ESP32 SoC</span>
                 <span className="text-xs font-mono text-slate-400 mt-1 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-100">ID: ESP32-001</span>
